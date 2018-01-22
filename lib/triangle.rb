@@ -12,12 +12,16 @@ class Triangle
     @b = length2
   elsif  (@length1 > @length2 && @length1 > @length3)
     @hypotenuse = length1
+    @a = length3
+    @b = length2
   else
     @hypotenuse = length2
+    @a = length1
+    @b = length3
   end
 
   def kind 
-  if ((@length1 > 0 && @length2 > 0 && @length3 > 0) && ((@length1 + @length2 > @length3) || (@length2 + @length3 > @length1) || (@length1 + @length3 > @length2)))
+  if ((@length1 > 0 && @length2 > 0 && @length3 > 0) && (@a + @b > @hypotenuse)
     if @length1 == @length2 && @length1 == @length3
       :equilateral
     elsif ((@length1 == @length2 && @length1 != @length3) || (@length1 == @length3 && @length1 != @length2) || (@length2 == @length3 && @length1 != @length2))

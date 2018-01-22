@@ -21,24 +21,20 @@ class Triangle
   end
 
   def kind 
-  if ((@length1 > 0 && @length2 > 0 && @length3 > 0) && (@a + @b > @hypotenuse))
-    if @length1 == @length2 && @length1 == @length3
+    if ((@length1 > 0 && @length2 > 0 && @length3 > 0) && (@a + @b > @hypotenuse))
+      if @length1 == @length2 && @length1 == @length3
       :equilateral
-    elsif ((@length1 == @length2 && @length1 != @length3) || (@length1 == @length3 && @length1 != @length2) || (@length2 == @length3 && @length1 != @length2))
-      :isosceles
+      elsif ((@length1 == @length2 && @length1 != @length3) || (@length1 == @length3 && @length1 != @length2) || (@length2 == @length3 && @length1 != @length2))
+        :isosceles
+      else
+        :scalene
+      end
     else
-      :scalene
+      raise TriangleError
     end
-  else
-    raise TriangleError
-    
   end
-    
-  end
-
 end
 
 class TriangleError < StandardError
  # triangle error code
-  
 end

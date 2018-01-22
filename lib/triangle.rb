@@ -1,11 +1,14 @@
 class Triangle
   # write code here
-  attr_accessor :length1, :length2, :length3
+  attr_accessor :length1, :length2, :length3, :hypotenuse
   
   def initialize(length1, length2, length3)
   @length3 = length3
   @length2 = length2
   @length1 = length1
+  if (@length3 > @length2 && @length3 > @length1)
+    @hypotenuse = length3
+    elsif 
   end
 
   def kind 

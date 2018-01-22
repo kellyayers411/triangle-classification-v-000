@@ -8,7 +8,7 @@ class Triangle
   @length1 = length1
   if (@length3 > @length2 && @length3 > @length1)
     @hypotenuse = length3
-    elsif 
+    elsif  (@length1 > @length2 && @length1 > @length3)
   end
 
   def kind 

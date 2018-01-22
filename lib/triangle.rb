@@ -1,6 +1,6 @@
 class Triangle
   # write code here
-  attr_accessor :length1, :length2, :length3, :hypotenuse
+  attr_accessor :length1, :length2, :length3, :hypotenuse, :a, :b
   
   def initialize(length1, length2, length3)
   @length3 = length3
@@ -8,8 +8,12 @@ class Triangle
   @length1 = length1
   if (@length3 > @length2 && @length3 > @length1)
     @hypotenuse = length3
-    elsif  (@length1 > @length2 && @length1 > @length3)
-    
+    @a = length1
+    @b = length2
+  elsif  (@length1 > @length2 && @length1 > @length3)
+    @hypotenuse = length1
+  else
+    @hypotenuse = length2
   end
 
   def kind 

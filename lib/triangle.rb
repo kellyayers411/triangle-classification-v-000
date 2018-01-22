@@ -18,7 +18,7 @@ class Triangle
       :scalene
     end
   else
-    
+    raise TriangleError
     
   end
 
@@ -26,7 +26,5 @@ end
 
 class TriangleError < StandardError
  # triangle error code
-  def message 
-    	"you must give the get_married method an argument of an instance of the person class!"
-  end
+  
 end
